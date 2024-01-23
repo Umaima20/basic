@@ -5,7 +5,7 @@ import { EmployeesModule } from './employees/employees.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { EmployeeEntity } from './employees/entities/employee.entity';
 import { ExpenseModule } from './expense/expense.module';
-import { ExpenseModule } from './expense/expense.module';
+import { ExpenseEntity } from './expense/entities/expense.entity';
 
 
 @Module({
@@ -16,7 +16,7 @@ import { ExpenseModule } from './expense/expense.module';
     username: 'testing',
     password: 'abc123',
     database: 'random',
-    entities: [EmployeeEntity],
+    entities: [EmployeeEntity, ExpenseEntity],
     synchronize: true,
   }),
 EmployeesModule,
